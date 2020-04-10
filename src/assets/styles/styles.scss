@@ -81,11 +81,5 @@ button { outline: none; }
 
 .content { flex: 1 0 auto; }
 
-.container {
-  margin: 0 auto;
-  max-width: $content;
-  width: 100%;
-}
-
 //Модули
 @import "modules/modules";
