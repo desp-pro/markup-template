@@ -7,10 +7,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const gulpif = require('gulp-if');
 
-// Работаем со стилями
-
 module.exports = function styles() {
-  return gulp.src('dev/static/styles/styles.scss')
+  return gulp.src('src/assets/styles/styles.scss')
     .pipe(plumber())
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
     .pipe(scss())
@@ -24,5 +22,5 @@ module.exports = function styles() {
       console.log(`${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`)
     })))
     .pipe(gulpif(!argv.prod, sourcemaps.write()))
-    .pipe(gulp.dest('dist/static/css'))
+    .pipe(gulp.dest('dist/assets/css'))
 };

@@ -1,5 +1,5 @@
 {
-  "name": "gulp-frontend-2020",
+  "name": "markup-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "style:lint": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
     "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix"
   },
-  "author": "Саламатин Анатолий",
-  "license": "ISC",
+  "author": "",
+  "license": "",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
@@ -47,9 +47,7 @@
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.15.0",
     "vinyl-buffer": "^1.0.1",
-    "yargs": "^15.3.1"
-  },
-  "dependencies": {
+    "yargs": "^15.3.1",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9"
   },

@@ -7,7 +7,7 @@ const spritesmith = require('gulp.spritesmith');
 
 module.exports = function spritePNG() {
   // Генерируем спрайт
-  const spriteData = gulp.src('dev/static/images/sprite/png/*.png').pipe(spritesmith({
+  const spriteData = gulp.src('src/assets/images/sprite/png/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     imgPath: '../images/sprite/sprite.png',
     cssName: 'sprite.scss',
@@ -21,11 +21,11 @@ module.exports = function spritePNG() {
   const imgStream = spriteData.img
     .pipe(buffer())
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/static/images/sprite/'));
+    .pipe(gulp.dest('dist/assets/images/sprite/'));
 
   // Собираем SCSS
   const cssStream = spriteData.css
-    .pipe(gulp.dest('dev/static/styles/utils/'));
+    .pipe(gulp.dest('src/assets/styles/utils/'));
 
   return merge(imgStream, cssStream);
 };
