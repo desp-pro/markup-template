@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const htmlValidator = require('gulp-w3c-html-validator');
 const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 
@@ -8,6 +7,5 @@ module.exports = function pug2html() {
     .pipe(plumber())
     .pipe(pug())
     .pipe(plumber.stop())
-    .pipe(htmlValidator())
     .pipe(gulp.dest('dist'))
 };
