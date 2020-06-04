@@ -2,7 +2,6 @@ const gulp = require('gulp');
 
 const imageMinify = require('./imageMinify');
 const svgSprite = require('./spriteSVG');
-const pngSprite = require('./spritePNG');
 const styles = require('./styles');
 const pug2html = require('./pug');
 const script = require('./scripts');
@@ -20,7 +19,6 @@ module.exports = function serve(cb) {
 
   gulp.watch('src/assets/images/*/*.{gif,png,jpg,jpeg,svg,webp}', gulp.series(imageMinify)).on('change', server.reload);
   gulp.watch('src/assets/images/sprite/svg/*.svg', gulp.series(svgSprite)).on('change', server.reload);
-  gulp.watch('src/assets/images/sprite/png/*.png', gulp.series(pngSprite)).on('change', server.reload);
   gulp.watch('src/assets/styles/**/*.scss', gulp.series(styles)).on('change', server.reload);
   gulp.watch('src/assets/js/**/*.js', gulp.series(script)).on('change', server.reload);
   gulp.watch('src/views/**/*.pug', gulp.series(pug2html));
